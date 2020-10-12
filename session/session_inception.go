@@ -3179,10 +3179,11 @@ func (s *session) checkAlterTable(node *ast.AlterTableStmt, sql string) {
 		}
 	}
 
-	if !s.hasError() && s.inc.ColumnsMustHaveIndex != "" {
-		tableCopy := s.getTableFromCache(node.Table.Schema.O, node.Table.Name.O, true)
-		s.checkColumnsMustHaveindex(tableCopy)
-	}
+	//if !s.hasError() && s.inc.ColumnsMustHaveIndex != "" {
+	//	tableCopy := s.getTableFromCache(node.Table.Schema.O, node.Table.Name.O, true)
+	//	s.checkColumnsMustHaveindex(tableCopy)
+	//}
+
 
 	// 生成alter回滚语句,多个时逆向
 	if !s.hasError() && s.opt.Execute && s.opt.Backup {
