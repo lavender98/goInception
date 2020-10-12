@@ -21,7 +21,7 @@ RUN git clone https://github.com/lavender98/goInception.git \
     && go build -o bin/goInception tidb-server/main.go \
     && cp bin/goInception /goInception \
     && cp dockersrc/pt-online-schema-change /tmp/pt-online-schema-change \
-    && cp config/config.toml.default /etc/config.toml \
+    && cp config/config.toml /etc/config.toml \
     && cd ../ && rm -rf goInception
 
 # Executable image
