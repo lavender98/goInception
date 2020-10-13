@@ -310,9 +310,6 @@ release2:
 
 
 docker:
-	@if [ ! -f bin/percona-toolkit.tar.gz ];then \
-		wget -O bin/percona-toolkit.tar.gz https://www.percona.com/downloads/percona-toolkit/3.0.4/source/tarball/percona-toolkit-3.0.4.tar.gz; \
-	fi
 	@if [ ! -f bin/pt-online-schema-change ];then \
 		wget -O bin/pt-online-schema-change percona.com/get/pt-online-schema-change; \
 	fi
